@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.3 on win32)" generated="2025-03-04T15:06:44.611707" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Framework" source="C:\Users\sevim\OneDrive\Desktop\robot_framework">
+<suite id="s1-s1" name="Learning Exercisies" source="C:\Users\sevim\OneDrive\Desktop\robot_framework\learning_exercisies">
+<suite id="s1-s1-s1" name="12 Date Picker" source="C:\Users\sevim\OneDrive\Desktop\robot_framework\learning_exercisies\12_date_picker.robot">
+<test id="s1-s1-s1-t1" name="Select Expected Date and Time" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:06:44.882008" level="INFO">Opening browser 'Chrome' to base url 'https://automationtesting.co.uk/datepicker.html'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-04T15:06:44.882008" elapsed="5.286228"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-04T15:06:50.169232" elapsed="0.050020"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-03-04T15:06:50.220250" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:06:50.222254" level="INFO">Clicking element 'xpath=(//input[@id='basicDate'])[1]'.</msg>
+<arg>xpath=(//input[@id='basicDate'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:06:50.221249" elapsed="1.075955"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-04T15:06:52.298435" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-04T15:06:51.297717" elapsed="1.000718"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-03-04T15:06:52.300558" level="INFO">${current_year} = 2025</msg>
+<var>${current_year}</var>
+<arg>result_format=%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-03-04T15:06:52.299495" elapsed="0.002018"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${current_year}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-04T15:06:52.301513" elapsed="0.000997"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-03-04T15:06:52.304512" level="INFO">${year_diff} = 3</msg>
+<var>${year_diff}</var>
+<arg>int(${TARGET_YEAR}) - int(${current_year})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-03-04T15:06:52.303508" elapsed="0.001004"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Year Next">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:06:52.309632" level="INFO">Clicking element 'xpath=(//span[@class='arrowUp'])[1]'.</msg>
+<arg>xpath=(//span[@class='arrowUp'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:06:52.309632" elapsed="1.053102"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-04T15:06:53.864388" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-04T15:06:53.362734" elapsed="0.501654"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-03-04T15:06:52.308510" elapsed="1.555878"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:06:53.865553" level="INFO">Clicking element 'xpath=(//span[@class='arrowUp'])[1]'.</msg>
+<arg>xpath=(//span[@class='arrowUp'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:06:53.865553" elapsed="1.037335"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-04T15:06:55.403821" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-04T15:06:54.902888" elapsed="0.500933"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-03-04T15:06:53.864388" elapsed="1.539937"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:06:55.405502" level="INFO">Clicking element 'xpath=(//span[@class='arrowUp'])[1]'.</msg>
+<arg>xpath=(//span[@class='arrowUp'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:06:55.404895" elapsed="1.061555"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-04T15:06:56.967409" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-04T15:06:56.466450" elapsed="0.501472"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-03-04T15:06:55.404382" elapsed="1.563540"/>
+</iter>
+<var>${i}</var>
+<value>${times}</value>
+<status status="PASS" start="2025-03-04T15:06:52.308510" elapsed="4.659412"/>
+</for>
+<arg>${year_diff}</arg>
+<status status="PASS" start="2025-03-04T15:06:52.307510" elapsed="4.660412"/>
+</kw>
+<arg>${year_diff} &gt; 0</arg>
+<arg>Click Year Next</arg>
+<arg>${year_diff}</arg>
+<arg>ELSE IF</arg>
+<arg>${year_diff} &lt; 0</arg>
+<arg>Click Year Previous</arg>
+<arg>${abs(${year_diff})}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-03-04T15:06:52.305509" elapsed="4.662413"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-03-04T15:06:56.969937" level="INFO">${current_month} = March</msg>
+<var>${current_month}</var>
+<arg>result_format=%B</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-03-04T15:06:56.969937" elapsed="0.001002"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${current_month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-04T15:06:56.971938" elapsed="0.001051"/>
+</kw>
+<kw name="Get Month Index">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-03-04T15:06:56.975061" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
+<var>${months}</var>
+<arg>January</arg>
+<arg>February</arg>
+<arg>March</arg>
+<arg>April</arg>
+<arg>May</arg>
+<arg>June</arg>
+<arg>July</arg>
+<arg>August</arg>
+<arg>September</arg>
+<arg>October</arg>
+<arg>November</arg>
+<arg>December</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-03-04T15:06:56.975061" elapsed="0.000998"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-03-04T15:06:56.976059" level="INFO">${index} = 4</msg>
+<var>${index}</var>
+<arg>${months}.index("${month_name}") + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-03-04T15:06:56.976059" elapsed="0.000928"/>
+</kw>
+<return>
+<value>${index}</value>
+<status status="PASS" start="2025-03-04T15:06:56.976987" elapsed="0.000000"/>
+</return>
+<msg time="2025-03-04T15:06:56.977970" level="INFO">${target_month_index} = 4</msg>
+<var>${target_month_index}</var>
+<arg>${TARGET_MONTH}</arg>
+<status status="PASS" start="2025-03-04T15:06:56.974050" elapsed="0.003920"/>
+</kw>
+<kw name="Get Month Index">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-03-04T15:06:56.979936" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
+<var>${months}</var>
+<arg>January</arg>
+<arg>February</arg>
+<arg>March</arg>
+<arg>April</arg>
+<arg>May</arg>
+<arg>June</arg>
+<arg>July</arg>
+<arg>August</arg>
+<arg>September</arg>
+<arg>October</arg>
+<arg>November</arg>
+<arg>December</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-03-04T15:06:56.978950" elapsed="0.000986"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-03-04T15:06:56.980937" level="INFO">${index} = 3</msg>
+<var>${index}</var>
+<arg>${months}.index("${month_name}") + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-03-04T15:06:56.979936" elapsed="0.001001"/>
+</kw>
+<return>
+<value>${index}</value>
+<status status="PASS" start="2025-03-04T15:06:56.980937" elapsed="0.001001"/>
+</return>
+<msg time="2025-03-04T15:06:56.981938" level="INFO">${current_month_index} = 3</msg>
+<var>${current_month_index}</var>
+<arg>${current_month}</arg>
+<status status="PASS" start="2025-03-04T15:06:56.978950" elapsed="0.002988"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-03-04T15:06:56.982937" level="INFO">${month_diff} = 1</msg>
+<var>${month_diff}</var>
+<arg>int(${target_month_index}) - int(${current_month_index})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-03-04T15:06:56.981938" elapsed="0.000999"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Month Next">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:06:56.984936" level="INFO">Clicking element 'xpath=//span[@class='flatpickr-next-month']'.</msg>
+<arg>xpath=//span[@class='flatpickr-next-month']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:06:56.984936" elapsed="1.065896"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-04T15:06:58.552270" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-04T15:06:58.050832" elapsed="0.501951"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-03-04T15:06:56.984936" elapsed="1.567847"/>
+</iter>
+<var>${i}</var>
+<value>${times}</value>
+<status status="PASS" start="2025-03-04T15:06:56.984936" elapsed="1.567847"/>
+</for>
+<arg>${month_diff}</arg>
+<status status="PASS" start="2025-03-04T15:06:56.983934" elapsed="1.568849"/>
+</kw>
+<arg>${month_diff} &gt; 0</arg>
+<arg>Click Month Next</arg>
+<arg>${month_diff}</arg>
+<arg>ELSE IF</arg>
+<arg>${month_diff} &lt; 0</arg>
+<arg>Click Month Previous</arg>
+<arg>${abs(${month_diff})}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-03-04T15:06:56.983934" elapsed="1.568849"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-04T15:06:58.554800" level="INFO">${aria_label} = April 19, 2028</msg>
+<var>${aria_label}</var>
+<arg>${TARGET_MONTH} ${TARGET_DAY}, ${TARGET_YEAR}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-04T15:06:58.554800" elapsed="0.001042"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${aria_label}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-04T15:06:58.556797" elapsed="0.001042"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-04T15:06:59.560839" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-04T15:06:58.558838" elapsed="1.002613"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//span[@aria-label='${aria_label}']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-03-04T15:06:59.563477" elapsed="1.298934"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:07:00.864526" level="INFO">Clicking element 'xpath=//span[@aria-label='April 19, 2028']'.</msg>
+<arg>xpath=//span[@aria-label='${aria_label}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:07:00.863538" elapsed="1.062337"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:07:02.957158" level="INFO">${ampm} = PM</msg>
+<var>${ampm}</var>
+<arg>xpath=//span[@class='flatpickr-am-pm']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:07:01.926406" elapsed="1.030752"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:07:02.960211" level="INFO">Clicking element 'xpath=//span[@class='flatpickr-am-pm']'.</msg>
+<arg>xpath=//span[@class='flatpickr-am-pm']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:07:02.959209" elapsed="1.079485"/>
+</kw>
+<arg>'${ampm}'=='PM'</arg>
+<arg>Click Element</arg>
+<arg>xpath=//span[@class='flatpickr-am-pm']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-03-04T15:07:02.958218" elapsed="1.080990"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-04T15:07:04.540550" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-04T15:07:04.039208" elapsed="0.501342"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>xpath=(//input[@title='Scroll to increment'])[2]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:07:04.542616" elapsed="1.052058"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:07:05.596692" level="INFO">Typing text '05' into text field 'xpath=(//input[@title='Scroll to increment'])[2]'.</msg>
+<arg>xpath=(//input[@title='Scroll to increment'])[2]</arg>
+<arg>${TARGET_HOUR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:07:05.595690" elapsed="1.602518"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>xpath=(//input[@title='Scroll to increment'])[3]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:07:07.199222" elapsed="1.050271"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:07:08.250655" level="INFO">Typing text '30' into text field 'xpath=(//input[@title='Scroll to increment'])[3]'.</msg>
+<arg>xpath=(//input[@title='Scroll to increment'])[3]</arg>
+<arg>${TARGET_MINUTE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:07:08.250655" elapsed="1.639203"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-04T15:07:10.891131" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-04T15:07:09.890869" elapsed="1.000774"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:07:11.922909" level="INFO">${actual_value} = April, 19 2028 05:30</msg>
+<var>${actual_value}</var>
+<arg>xpath=(//input[@id='basicDate'])[1]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:07:10.893085" elapsed="1.029824"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-04T15:07:11.925264" level="INFO">Selected date and time: April, 19 2028 05:30</msg>
+<arg>Selected date and time: ${actual_value}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-04T15:07:11.924245" elapsed="0.001019"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_value}</arg>
+<arg>${EXPECTED_DATETIME}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-03-04T15:07:11.926263" elapsed="0.001310"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-04T15:07:11.928589" elapsed="2.613909"/>
+</kw>
+<doc>Test to select the date: 19 April 2028, 05:30 AM from the date picker.</doc>
+<status status="PASS" start="2025-03-04T15:06:44.879984" elapsed="29.663462"/>
+</test>
+<status status="PASS" start="2025-03-04T15:06:44.640708" elapsed="29.905784"/>
+</suite>
+<status status="PASS" start="2025-03-04T15:06:44.637707" elapsed="29.911787"/>
+</suite>
+<status status="PASS" start="2025-03-04T15:06:44.615709" elapsed="29.936786"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Robot Framework" id="s1" pass="1" fail="0" skip="0">Robot Framework</stat>
+<stat name="Learning Exercisies" id="s1-s1" pass="1" fail="0" skip="0">Robot Framework.Learning Exercisies</stat>
+<stat name="12 Date Picker" id="s1-s1-s1" pass="1" fail="0" skip="0">Robot Framework.Learning Exercisies.12 Date Picker</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
